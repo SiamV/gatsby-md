@@ -1,0 +1,31 @@
+.navbarMainBlock {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+    height: 10vh;
+}
+
+.menuButton {
+    margin-right: 10vw;
+    padding: 1vh;
+    max-height: 9vh;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: rgb(25, 153, 25);
+    border: none;
+    border-radius: 10%;
+    box-shadow: 0 0 10px #000000;
+}
+.menuButton:hover {
+    background-color: white;
+    color: green;
+}
+.menuButton:active {
+    background-color: white;
+    color: green;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

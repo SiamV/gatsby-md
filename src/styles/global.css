@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'YsabeauSC';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url("/fonts/YsabeauSC-Regular.woff2") format("woff2");
+}
+
+html,
+body {
+    color: white;
+    font-family: 'Inter var';
+    line-height: 1.4;
+    letter-spacing: calc(1em / 12);
+    font-size: 14px;
+    background-color: rgba(230, 230, 230, 1);
+    width: 100%;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 18px;
+    color: white;
+}
+
+h2 {
+    font-size: 16px;
+    color: white ;
+}
+
+h3 {
+    font-size: 15px;
+    color: white  ;
+}
+
+a {
+    color: #0070f3;
+    font-style: italic;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    font-style: italic;
+  }
+
+button {
+    font-family: 'YsabeauSC';
+}

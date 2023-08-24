@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'PTSans';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url("/fonts/PTSans-Regular.woff2") format("woff2");
+}
+
+.wrapperSinglePage {
+    height: 100%;
+    background-color: rgb(209, 207, 207);
+    overflow: auto;
+}
+
+.contentSinglePage {
+    font-family: 'PTSans';
+    background-color: white;
+    color: black;
+    text-align: justify;
+    margin: 7vh 10vw 7vh 10vw;
+    padding: 2vh 3vw 2vh 3vw;
+    overflow: auto;
+}
+.contentSinglePage h1 {
+    color: black;
+}
+.contentSinglePage h2 {
+    color: black;
+}
+
+@media screen and (max-width: 480px) {
+    .contentSinglePage {
+        margin: 5vh 5vw 5vh 5vw;
+    }
+}

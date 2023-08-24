@@ -1,0 +1,69 @@
+.wrapperAllPage{
+    display: flex;
+    flex-direction: row;
+    height: 85dvh;
+}
+.wrapperLeftFild {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 50vw;
+    height: 100%;
+    /* border: 2px solid red; */
+}
+.wrapperRightField {
+    width: 50vw;
+    height: 100%;
+}
+
+.wrapperLink {
+    width: 100%;
+    /* border: 2px solid green; */
+}
+
+.menuButton {
+    width: 95%;
+    padding: 10px;
+    margin-left: 5%;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(27, 26, 26);
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 10px #000000;
+    /* border: 2px solid blue; */
+}
+.menuButton:hover {
+    background-color: grey;
+    color: white;
+}
+.menuButton:active {
+    background-color: grey;
+    color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+@media screen and (max-width: 840px) {
+    .wrapperLeftFild {
+        width: 70vw;
+    }
+    .wrapperRightField {
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapperLeftFild {
+        width: 70vw;
+    }
+    .wrapperRightField {
+        width: 30vw;
+    }
+    .menuButton {
+        height: 12dvh;
+        padding: 1px;
+    }
+}

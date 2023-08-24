@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /
+Host: prozakon.info
+
+User-agent: Yandex
+Disallow: /
+Host: prozakon.info
+
+User-agent: Googlebot
+Disallow: /

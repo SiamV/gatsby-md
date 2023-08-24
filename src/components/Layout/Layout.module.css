@@ -1,0 +1,40 @@
+.siteWrapper {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'feed';
+    grid-template-rows: 10dvh 90dvh;
+    grid-template-columns: 1fr;
+}
+
+.siteWrapper .siteWrapperHeader {
+    grid-area: header;
+    background-color: rgb(87, 87, 87);
+}
+
+.siteWrapper .siteWrapperFeed {
+    grid-area: feed;
+    height: 100%;
+    background-image: url("../../images/backgroundDesctop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left bottom;
+    /* background-size: minmax(auto 100vw) 90dvh; */
+    overflow: auto;
+    z-index: 3;
+}
+
+@media screen and (max-width: 840px) {
+    .siteWrapper .siteWrapperFeed {
+        background-image: url("../../images/backgroundMobile.jpg");
+        background-position: right bottom;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .siteWrapper .siteWrapperFeed {
+        background-image: url("../../images/backgroundMobile.jpg");
+        background-position: right bottom;
+    }
+}

@@ -1,0 +1,7 @@
+.wrapperBackButton {
+    position: fixed;
+    bottom: 15vh;
+    right: 0;
+    z-index: 2;
+    margin-bottom: 5vh;
+}
