@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Seo from "../components/Seo/Seo";
 import Layout from "../components/Layout/Layout";
 import PostsCategory from "../components/PostsCategory/PostsCategory";
+import BackButton from "../components/BackButton/BackButton";
 import *as classes from "../styles/categoryPage.module.css";
 
 const Services = ({ data }) => {
@@ -14,46 +15,46 @@ const Services = ({ data }) => {
                 <div className={classes.wrapperContentBlock}>
                     <h2>Задачки со звездочкой</h2>
                     {posts.filter(it => it.frontmatter.category === "hard-tasks")
-                    .sort((a, b) => a.frontmatter.sort - b.frontmatter.sort).map(post => {
-                        return (
-                            <div key={post.id}>
-                                <PostsCategory
-                                    folder={post.frontmatter.folder}
-                                    url={post.frontmatter.url}
-                                    title={post.frontmatter.title}
-                                />
-                            </div>
-                        )
-                    })}
+                        .sort((a, b) => a.frontmatter.sort - b.frontmatter.sort).map(post => {
+                            return (
+                                <div key={post.id}>
+                                    <PostsCategory
+                                        folder={post.frontmatter.folder}
+                                        url={post.frontmatter.url}
+                                        title={post.frontmatter.title}
+                                    />
+                                </div>
+                            )
+                        })}
                     <h2>Работа с документами</h2>
                     {posts.filter(it => it.frontmatter.category === "services-in-institutions")
-                    .sort((a, b) => a.frontmatter.sort - b.frontmatter.sort).map(post => {
-                        return (
-                            <div key={post.id}>
-                                <PostsCategory
-                                    folder={post.frontmatter.folder}
-                                    url={post.frontmatter.url}
-                                    title={post.frontmatter.title}
-                                />
-                            </div>
-                        )
-                    })}
+                        .sort((a, b) => a.frontmatter.sort - b.frontmatter.sort).map(post => {
+                            return (
+                                <div key={post.id}>
+                                    <PostsCategory
+                                        folder={post.frontmatter.folder}
+                                        url={post.frontmatter.url}
+                                        title={post.frontmatter.title}
+                                    />
+                                </div>
+                            )
+                        })}
                     <h2>Услуги в учреждениях</h2>
                     {posts.filter(it => it.frontmatter.category === "work-with-documents")
-                    .sort((a, b) => a.frontmatter.sort - b.frontmatter.sort).map(post => {
-                        return (
-                            <div key={post.id}>
-                                <PostsCategory
-                                    folder={post.frontmatter.folder}
-                                    url={post.frontmatter.url}
-                                    title={post.frontmatter.title}
-                                />
-                            </div>
-                        )
-                    })}
+                        .sort((a, b) => a.frontmatter.sort - b.frontmatter.sort).map(post => {
+                            return (
+                                <div key={post.id}>
+                                    <PostsCategory
+                                        folder={post.frontmatter.folder}
+                                        url={post.frontmatter.url}
+                                        title={post.frontmatter.title}
+                                    />
+                                </div>
+                            )
+                        })}
                 </div>
             </div>
-
+            <BackButton path={'/'} />
         </Layout>
     )
 }

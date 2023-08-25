@@ -1,7 +1,39 @@
 .wrapperBackButton {
     position: fixed;
-    bottom: 15vh;
+    top: 12vh;
     right: 0;
     z-index: 2;
-    margin-bottom: 5vh;
+}
+
+.imgBack {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px #000000;
+    /*box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em #800;*/
+    border-radius: 25%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.imgBack:active {
+    top: .1em;
+    left: .1em;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
+}
+
+@media screen and (max-width: 480px) {
+    .imgBack {
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 10px #000000;
+        border-radius: 25%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .imgBack:active {
+        top: .1em;
+        left: .1em;
+        box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
+    }
 }

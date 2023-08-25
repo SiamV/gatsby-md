@@ -1,0 +1,13 @@
+.wrapperSearch {
+    background-color: white;
+    height: 100%;
+    color: black;
+    padding: 0 10px 0 10px;
+    overflow: auto;
+}
+
+.wrapperOneSearch {
+    border: 2px dotted grey;
+    margin-top: 10px;
+    padding: 10px;
+}

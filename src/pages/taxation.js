@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Seo from "../components/Seo/Seo";
 import Layout from "../components/Layout/Layout";
 import PostsCategory from "../components/PostsCategory/PostsCategory";
+import BackButton from "../components/BackButton/BackButton";
 import *as classes from "../styles/categoryPage.module.css";
 
 const Taxation = ({ data }) => {
@@ -40,7 +41,7 @@ const Taxation = ({ data }) => {
                         })}
                 </div>
             </div>
-
+            <BackButton path={'/'} />
         </Layout>
     )
 }

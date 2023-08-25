@@ -1,17 +1,71 @@
-import React from "react";
-import Seo from "../components/Seo/Seo";
+import React, { useState } from "react";
+import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout/Layout";
+import { categoryTitlesSearch } from "../constans/titles";
+import *as classes from "../styles/search.module.css"
 
 const Search = ({ data }) => {
+    const [search, setSearch] = useState("");
+    const posts = data.allMarkdownRemark.nodes;
+    const selectedPosts = posts.filter((post) => {
+        return post.html.toLowerCase().includes(search.toLowerCase()) || post.frontmatter.title.toLowerCase().includes(search.toLowerCase());
+    }).sort((a, b) => a.frontmatter.category.localeCompare(b.frontmatter.category));
+
     return (
         <Layout>
-            <div>Здесь будет реализована система поиска</div>
+            <div className={classes.wrapperSearch}>
+                <div>Введите ключевое слово для поиска:</div>
+                <input
+                    type="text"
+                    value={search}
+                    onChange={(e) => { setSearch(e.target.value) }}
+                />
+                <div>Наиболее соответствует запросу:</div>
+                {search.length > 1 ?
+                    selectedPosts.map((it) => {
+                        let text = it.html.replace(/<[^>]+>/g, '').split(" ")
+                        function findPartial(a, s) {
+                            for (var i = 0; i < a.length; ++i)
+                                if (a[i].indexOf(s) >= 0)
+                                    return i;
+                            return -1;
+                        }
+                        let indexArr = findPartial(text, search)
+                        let findStr = text.slice(indexArr - 5, indexArr + 5).join(" ")
+
+                        return (
+                            <div key={it.id} className={classes.wrapperOneSearch}>
+                                <div>
+                                    <Link to={`/${it.frontmatter.folder}/${it.frontmatter.url}`} >
+                                        {categoryTitlesSearch[it.frontmatter.category]} / {it.frontmatter.title}
+                                    </Link>
+                                </div>
+                                {findStr.length > 0 ? <div>{`...${findStr}...`}</div> : null}
+                            </div>
+                        )
+                    }
+                    )
+                    : null}
+            </div>
         </Layout>
     )
 }
 
 export default Search
 
-export const Head = ({ data }) => {
-    return < Seo title={"seodata.seotitle"} description={"seodata.seodescription"} robots={"seodata.robots"} />
-}
+export const query = graphql`
+query MyQuery {
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          url
+          title
+          folder
+          category
+        }
+        html
+        id
+      }
+    }
+  }
+`

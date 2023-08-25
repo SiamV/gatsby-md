@@ -55,7 +55,7 @@ const Residence = ({ data }) => {
                         })}
                 </div>
             </div>
-            <BackButton path={'/'}/>
+            <BackButton path={'/'} />
         </Layout >
     )
 }
