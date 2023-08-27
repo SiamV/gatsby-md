@@ -1,10 +1,13 @@
-User-agent: *
-Disallow: /
-Host: prozakon.info
-
 User-agent: Yandex
-Disallow: /
+Allow: /
 Host: prozakon.info
 
 User-agent: Googlebot
-Disallow: /
+Allow: /
+Allow: *.css # открыть все файлы стилей
+Allow: *.js # открыть все с js-скриптами
+
+User-agent: *
+Allow: /
+
+Sitemap: https://prozakon.info/sitemap-index.xml

@@ -7,6 +7,7 @@ seoTitle:
 seoDescription: описание для Сео
 robots: index,follow
 sort: 1
+search: главная
 ---
 
 # Главная страница

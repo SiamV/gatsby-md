@@ -8,19 +8,19 @@ const Search = ({ data }) => {
     const [search, setSearch] = useState("");
     const posts = data.allMarkdownRemark.nodes;
     const selectedPosts = posts.filter((post) => {
-        return post.html.toLowerCase().includes(search.toLowerCase()) || post.frontmatter.title.toLowerCase().includes(search.toLowerCase());
+        return post.frontmatter.search.toLowerCase().includes(search.toLowerCase()) || post.html.toLowerCase().includes(search.toLowerCase()) || post.frontmatter.title.toLowerCase().includes(search.toLowerCase())
     }).sort((a, b) => a.frontmatter.category.localeCompare(b.frontmatter.category));
 
     return (
         <Layout>
             <div className={classes.wrapperSearch}>
-                <div>Введите ключевое слово для поиска:</div>
+                <h2>Введите ключевое слово для поиска:</h2>
                 <input
                     type="text"
                     value={search}
                     onChange={(e) => { setSearch(e.target.value) }}
                 />
-                <div>Наиболее соответствует запросу:</div>
+                <p><strong>Наиболее соответствует запросу:</strong></p>
                 {search.length > 1 ?
                     selectedPosts.map((it) => {
                         let text = it.html.replace(/<[^>]+>/g, '').split(" ")
@@ -62,6 +62,7 @@ query MyQuery {
           title
           folder
           category
+          search
         }
         html
         id

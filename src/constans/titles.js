@@ -10,7 +10,7 @@ export const categoryTitlesSearch = {
     "permanent": "ПМЖ",
     "naturalizacion": "Натурализация",
     "immigration": "Ведение иммиграционных судебных процессов",
-    "family": "Семейный кодекс",
+    "family": "Семейный и гражданский кодексы",
     "administrative": "Административный кодекс",
     "protection-human": "Защита прав человека и другие судебные инстанции",
     "accident-auto": "ДТП",
@@ -30,7 +30,7 @@ export const categoryTitles2 = [[{
     "naturalizacion": "Натурализация"
 }], [{
     "immigration": "Ведение иммиграционных судебных процессов",
-    "family": "Семейный кодекс",
+    "family": "Семейный и гражданский кодексы",
     "administrative": "Административный кодекс",
     "protection-human": "Защита прав человека и другие судебные инстанции",
     "accident-auto": "ДТП"
@@ -51,7 +51,7 @@ export const categoryTitles = {
     },
     "law": {
         "immigration": "Ведение иммиграционных судебных процессов",
-        "family": "Семейный кодекс",
+        "family": "Семейный и гражданский кодексы",
         "administrative": "Административный кодекс",
         "protection-human": "Защита прав человека и другие судебные инстанции",
         "accident-auto": "ДТП"

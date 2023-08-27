@@ -28,6 +28,9 @@
 .contentSinglePage h2 {
     color: black;
 }
+.contentSinglePage img {
+    /* target: none; */
+}
 
 @media screen and (max-width: 480px) {
     .contentSinglePage {

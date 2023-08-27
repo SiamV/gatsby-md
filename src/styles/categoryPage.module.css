@@ -2,7 +2,7 @@
     width: 50vw;
     height: 100%;
     overflow: auto;
-    background-color: rgb(87, 87, 87, 0.7);
+    background-color: rgb(87, 87, 87, 0.8);
 }
 
 .wrapperCategoryBlock h1 {
@@ -26,6 +26,7 @@
 }
 .wrapperLink {
     width: 100%;
+    color: rgb(193, 193, 255);
 }
 
 li {

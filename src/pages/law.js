@@ -26,7 +26,7 @@ const LawMigration = ({ data }) => {
                                 </div>
                             )
                         })}
-                    <h2>Семейный кодекс</h2>
+                    <h2>Семейный и гражданский кодексы</h2>
                     {posts.filter(it => it.frontmatter.category === "family")
                         .sort((a, b) => a.frontmatter.sort - b.frontmatter.sort).map(post => {
                             return (

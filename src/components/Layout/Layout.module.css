@@ -3,7 +3,7 @@
     grid-template-areas:
       'header'
       'feed';
-    grid-template-rows: 10dvh 90dvh;
+    grid-template-rows: 10vh 90vh;
     grid-template-columns: 1fr;
 }
 
@@ -20,7 +20,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left bottom;
-    /* background-size: minmax(auto 100vw) 90dvh; */
     overflow: auto;
     z-index: 3;
 }

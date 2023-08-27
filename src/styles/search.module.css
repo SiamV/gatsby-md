@@ -11,3 +11,23 @@
     margin-top: 10px;
     padding: 10px;
 }
+
+.wrapperSearch h2 {
+    color: #333;
+    font-size: 14px;
+}
+
+.wrapperSearch input[type="text"] {
+    border: 1px solid #d5d9e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #333;
+    padding: 10px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+.wrapperSearch input[type="text"]:focus {
+    border-color: #ffa000;
+    outline: none;
+}

@@ -1,7 +1,7 @@
 .wrapperAllPage{
     display: flex;
     flex-direction: row;
-    height: 85dvh;
+    height: 85vh;
 }
 .wrapperLeftFild {
     display: flex;
@@ -63,7 +63,7 @@
         width: 30vw;
     }
     .menuButton {
-        height: 12dvh;
+        height: 12vh;
         padding: 1px;
     }
 }
